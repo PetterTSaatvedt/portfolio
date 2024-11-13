@@ -67,7 +67,7 @@ const Header = () => {
             <HStack spacing={8}>
               {socials.map((social) => {
                 return (
-                  <a href={social.url}>
+                  <a href={social.url} key={social.url}>
                     <FontAwesomeIcon icon={social.icon} size="2x" />
                   </a>
                 );
