@@ -49,15 +49,10 @@ const LandingSection = () => {
     }),
   });
 
-  console.log(getFieldProps("name"));
-  console.log(errors);
-
-
   return (
     <FullScreenSection
       isDarkBackground
       backgroundColor="#2f3e46"
-      py={16}
       spacing={8}
     >
       <VStack w="1024px" p={32} alignItems="flex-start">
@@ -68,10 +63,10 @@ const LandingSection = () => {
           <form onSubmit={handleSubmit}>
             <VStack spacing={4}>
               <FormControl isInvalid={errors.firstName && touched.firstName ? true : false}>
-                <FormLabel htmlFor="firstName">Name</FormLabel>
                 <Input
                   id="firstName"
                   name="firstName"
+                  placeholder="First name"
                   value={values.firstName}
                   onChange={handleChange}
                   onBlur={handleBlur}
@@ -79,10 +74,10 @@ const LandingSection = () => {
                 {errors.firstName && touched.firstName && <FormErrorMessage>{errors.firstName}</FormErrorMessage>}
               </FormControl>
               <FormControl isInvalid={errors.email && touched.email ? true : false}>
-                <FormLabel htmlFor="email">Email Address</FormLabel>
                 <Input
                   id="email"
                   name="email"
+                  placeholder="Email"
                   value={values.email}
                   onChange={handleChange}
                   onBlur={handleBlur}
