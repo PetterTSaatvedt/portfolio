@@ -12,6 +12,7 @@ const useSubmit = () => {
 
   const submit = async (url, data) => {
     const random = Math.random();
+    console.log(random);
     setLoading(true);
     try {
       await wait(2000);

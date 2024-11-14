@@ -26,7 +26,7 @@ const LandingSection = () => {
     values,
     errors,
     touched,
-    getFieldProps,
+    resetForm,
     handleBlur,
     handleSubmit,
     handleChange,
@@ -39,7 +39,7 @@ const LandingSection = () => {
     },
     onSubmit: (values, actions) => {
       submit("", values);
-      actions.resetForm();
+      console.log(response);
     },
     validationSchema: Yup.object({
       firstName: Yup.string().required('First name required.'),
@@ -48,6 +48,15 @@ const LandingSection = () => {
       comment: Yup.string().required('Please provide a message for your inquiry.'),
     }),
   });
+
+  useEffect(() => {
+    if(response){
+      onOpen(response.type, response.message);
+      if(response.type == 'success'){
+        resetForm();
+      }
+    }
+  }, [response])
 
   return (
     <FullScreenSection
