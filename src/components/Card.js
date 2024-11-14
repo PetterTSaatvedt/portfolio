@@ -9,11 +9,11 @@ const Card = ({ title, description, imageSrc }) => {
   // Feel free to import other UI components from Chakra UI if you wish to.
   return (
     <VStack
-      backgroundColor="#ffffff"
-      color="#363636"
+      backgroundColor="#cad2c5"
+      color="#2f3e46"
       rounded="xl"
     >
-      <Image src={imageSrc} rounded="xl"/>
+      <Image src={imageSrc} roundedTop="xl"/>
       <VStack spacing={4} alignItems="left" p={4}>
         <Heading as="h2" size="md">{title}</Heading>
         <Text>{description}</Text>

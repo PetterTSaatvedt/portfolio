@@ -30,7 +30,7 @@ const LandingSection = () => {
   return (
     <FullScreenSection
       isDarkBackground
-      backgroundColor="#512DA8"
+      backgroundColor="#52796f"
       py={16}
       spacing={8}
     >
@@ -77,7 +77,7 @@ const LandingSection = () => {
                 />
                 <FormErrorMessage></FormErrorMessage>
               </FormControl>
-              <Button type="submit" colorScheme="purple" width="full">
+              <Button type="submit" colorScheme="blackAlpha" width="full">
                 Submit
               </Button>
             </VStack>
