@@ -11,6 +11,7 @@ import {
   Select,
   Textarea,
   VStack,
+  Spinner,
 } from "@chakra-ui/react";
 import * as Yup from 'yup';
 import FullScreenSection from "./FullScreenSection";
@@ -21,58 +22,83 @@ const LandingSection = () => {
   const {isLoading, response, submit} = useSubmit();
   const { onOpen } = useAlertContext();
 
-  const formik = useFormik({
+  const {
+    values,
+    errors,
+    touched,
+    getFieldProps,
+    handleBlur,
+    handleSubmit,
+    handleChange,
+  } = useFormik({
     initialValues: {
       firstName: "",
       email: "",
       type: "",
       comment: "",
     },
-    onSubmit: (values) => {
-      submit(url, values);
+    onSubmit: (values, actions) => {
+      submit("", values);
+      actions.resetForm();
     },
     validationSchema: Yup.object({
-      firstName: Yup.string().required('Required'),
-      email: Yup.string().email('Invalid email').required('Required'),
-      type: Yup.string().required('Required'),
-      comment: Yup.string().required('Required')
+      firstName: Yup.string().required('First name required.'),
+      email: Yup.string().email('Invalid email').required("Email is required."),
+      type: Yup.string(),
+      comment: Yup.string().required('Please provide a message for your inquiry.'),
     }),
   });
+
+  console.log(getFieldProps("name"));
+  console.log(errors);
+
 
   return (
     <FullScreenSection
       isDarkBackground
-      backgroundColor="#52796f"
+      backgroundColor="#2f3e46"
       py={16}
       spacing={8}
     >
       <VStack w="1024px" p={32} alignItems="flex-start">
-        <Heading as="h1" id="contactme-section">
+        <Heading as="h1" id="contactme-section" color="#cad2c5">
           Contact me
         </Heading>
         <Box p={6} rounded="md" w="100%">
-          <form>
+          <form onSubmit={handleSubmit}>
             <VStack spacing={4}>
-              <FormControl isInvalid={false}>
+              <FormControl isInvalid={errors.firstName && touched.firstName ? true : false}>
                 <FormLabel htmlFor="firstName">Name</FormLabel>
                 <Input
                   id="firstName"
                   name="firstName"
+                  value={values.firstName}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
                 />
-                <FormErrorMessage></FormErrorMessage>
+                {errors.firstName && touched.firstName && <FormErrorMessage>{errors.firstName}</FormErrorMessage>}
               </FormControl>
-              <FormControl isInvalid={false}>
+              <FormControl isInvalid={errors.email && touched.email ? true : false}>
                 <FormLabel htmlFor="email">Email Address</FormLabel>
                 <Input
                   id="email"
                   name="email"
+                  value={values.email}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
                   type="email"
                 />
-                <FormErrorMessage></FormErrorMessage>
+                {errors.email && touched.email && <FormErrorMessage>{errors.email}</FormErrorMessage>}
               </FormControl>
               <FormControl>
                 <FormLabel htmlFor="type">Type of enquiry</FormLabel>
-                <Select id="type" name="type">
+                <Select 
+                id="type"
+                name="type"
+                value={values.type}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                >
                   <option value="hireMe">Freelance project proposal</option>
                   <option value="openSource">
                     Open source consultancy session
@@ -80,17 +106,20 @@ const LandingSection = () => {
                   <option value="other">Other</option>
                 </Select>
               </FormControl>
-              <FormControl isInvalid={false}>
+              <FormControl isInvalid={errors.comment && touched.comment ? true : false}>
                 <FormLabel htmlFor="comment">Your message</FormLabel>
                 <Textarea
                   id="comment"
                   name="comment"
                   height={250}
+                  value={values.comment}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
                 />
-                <FormErrorMessage></FormErrorMessage>
+                {errors.comment && touched.comment && <FormErrorMessage>{errors.comment}</FormErrorMessage>}
               </FormControl>
               <Button type="submit" colorScheme="blackAlpha" width="full">
-                Submit
+                {isLoading ? <Spinner size="md" /> : "Submit"}
               </Button>
             </VStack>
           </form>
