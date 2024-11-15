@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -44,13 +44,45 @@ const Header = () => {
     }
   };
 
+  // Hide/Show header on scroll
+  const usePrevious = (value) => {
+    const ref = useRef();
+    useEffect(() => {
+      ref.current = value;
+    });
+    return ref.current;
+  };
+
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const previousScrollPosition = usePrevious(scrollPosition);
+  const scrollRef = useRef();
+
+  const handleScroll = () => {
+    setScrollPosition(window.scrollY);
+
+    if (scrollRef.current){
+      if (previousScrollPosition < scrollPosition) {
+        scrollRef.current.style.transform = "translateY(-100%)";
+      } else if (previousScrollPosition > scrollPosition) {
+        scrollRef.current.style.transform = "translateY(0)";
+      }
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('scroll', handleScroll);
+    return () => {
+      document.removeEventListener('scroll', handleScroll);
+    }
+  }, [scrollPosition, previousScrollPosition]);
+
   return (
     <Box
+      ref={scrollRef}
       position="fixed"
       top={0}
       left={0}
       right={0}
-      translateY={0}
       transitionProperty="transform"
       transitionDuration=".3s"
       transitionTimingFunction="ease-in-out"
