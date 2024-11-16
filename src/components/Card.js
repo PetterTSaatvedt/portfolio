@@ -10,7 +10,6 @@ const Card = ({ title, description, imageSrc }) => {
   return (
     <VStack
       backgroundColor="#2f3e46"
-      
       rounded="xl"
     >
       <Image src={imageSrc} roundedTop="xl"/>

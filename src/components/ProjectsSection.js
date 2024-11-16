@@ -5,9 +5,9 @@ import Card from "./Card";
 
 const projects = [
   {
-    title: "React Space",
+    title: "Fantasy Premier League",
     description:
-      "Handy tool belt to create amazing AR components in a React app, with redux integration via middleware️",
+      "An FPL overview site for rank/points, leagues and more, fetching data from the official Fantasy Premier League API.",
     getImageSrc: () => require("../images/photo1.jpg"),
   },
   {
