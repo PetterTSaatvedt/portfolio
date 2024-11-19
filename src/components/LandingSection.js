@@ -1,10 +1,11 @@
 import React from "react";
-import { Avatar, Heading, VStack, Mark, defineStyle } from "@chakra-ui/react";
+import { Avatar, Heading, VStack, Mark, defineStyle, Text } from "@chakra-ui/react";
 import FullScreenSection from "./FullScreenSection";
 
-const greeting = "Hello, I am Petter!";
-const bio1 = "Frontend developer";
-const bio2 = "specialised in React";
+const greeting = "Hallais!👋 Mitt navn er Petter,";
+const bio1 = "frontend-utvikler";
+const bio2 = "med en interesse for UX og universell utforming!";
+const bio3 = "For øyeblikket fullfører jeg en mastergrad i informasjonsteknologi på OsloMet 📚"
 
 // Implement the UI for the LandingSection component according to the instructions.
 // Use a combination of Avatar, Heading and VStack components.
@@ -26,12 +27,12 @@ const LandingSection = () => (
   >
     <VStack spacing={8}>
       <VStack spacing={4}>
-        <Avatar src="https://i.pravatar.cc/150?img=56" size="2xl" css={ringCss}></Avatar>
+        <Avatar src={require("../images/landingpicture.jpg")} size="2xl" css={ringCss} />
         <Heading size="xs">{greeting}</Heading>
       </VStack>
       <VStack>
         <Heading>
-          A {" "}
+          Jeg er en {" "}
           <Mark
               fontStyle="italic"
               color="#84a98c"
@@ -45,9 +46,13 @@ const LandingSection = () => (
               alt=""
             />
           </Mark>
+          {" "} spesialisert i React
         </Heading>
         <Heading>{bio2}</Heading>
       </VStack>
+      <VStack spacing={8}>
+          <Heading size="sm">{bio3}</Heading>
+        </VStack>
     </VStack>
     
   </FullScreenSection>

@@ -6,7 +6,7 @@ const EducationSection = () => {
 
     return (
         <FullScreenSection
-        p={16}
+        p={8}
         spacing={8}
         alignItems="center"
         isDarkBackground
@@ -18,15 +18,20 @@ const EducationSection = () => {
                 <HStack>
                     <Box>
                         <VStack>
-                            <Heading as="h2" size="lg">Frontend- og mobilutvikling, Høyskolen Kristiania</Heading>
-                            <Image src={require("../images/kristiania.png")} h="200px"/>
+                            <HStack>
+                                <Heading as="h2" size="lg">Frontend- og mobilutvikling, Høyskolen Kristiania</Heading>
+                                <Image src={require("../images/kristiania.png")} h="80px"/>
+                            </HStack>
                         </VStack>
                     </Box>
                     <Divider orientation="vertical" h="300px" p={2}/>
                     <Box>
                         <VStack>
-                            <Heading as="h2" size="lg">Anvendt data- og informasjonsteknologi, OsloMet</Heading>
-                            <Image src={require("../images/oslomet.png")} h="200px"/>
+                            <HStack>
+                                <Heading as="h2" size="lg">Anvendt data- og informasjonsteknologi, OsloMet</Heading>
+                                <Image src={require("../images/oslomet.png")} h="80px"/>
+                            </HStack>
+                            
                         </VStack>
                     </Box>
                 </HStack>
