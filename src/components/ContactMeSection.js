@@ -63,9 +63,10 @@ const LandingSection = () => {
       isDarkBackground
       backgroundColor="#2f3e46"
       spacing={8}
+      id="contactme-section"
     >
       <VStack w="1024px" p={32} alignItems="flex-start">
-        <Heading as="h1" id="contactme-section" color="#cad2c5">
+        <Heading as="h1" color="#cad2c5">
           Contact me
         </Heading>
         <Box p={6} rounded="md" w="100%">

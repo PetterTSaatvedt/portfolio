@@ -16,6 +16,7 @@ const EducationSection = () => {
         isDarkBackground
         backgroundColor="#0c1821"
         color="#cad2c5"
+        id="education-section"
         >
             <VStack spacing={8}>
                 <Heading as="h1" size="xl">Utdanning</Heading>
