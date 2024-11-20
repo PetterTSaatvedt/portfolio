@@ -3,15 +3,15 @@ import { Avatar, Heading, VStack, HStack, Mark, defineStyle, Text, Divider, Box,
 import FullScreenSection from "./FullScreenSection";
 
 const EducationSection = () => {
-    const firstStudyName = "Frontend- og mobilutvikling";
+    const firstStudyName = "Informasjonsteknologi";
     const firstSchoolName = "Høyskolen Kristiania";
     const secondStudyName = "Anvendt data- og informasjonsteknologi";
     const secondSchoolName = "OsloMet"
 
     return (
         <FullScreenSection
-        p={8}
-        spacing={8}
+        p={12}
+        spacing={12}
         alignItems="center"
         isDarkBackground
         backgroundColor="#0c1821"
@@ -21,36 +21,63 @@ const EducationSection = () => {
             <Heading as="h1" size="xl">Utdanning</Heading>
             <Stack 
                 direction={{base: 'column', lg: 'row'}}
-                spacing={8}
+                spacing={12}
                 divider={<StackDivider borderColor="#2f3e46" />}
             >
-                <Box>
-                    <VStack>
-                        <HStack justifyContent="space-between" width="100%" spacing={8}>
-                            <Heading as="h2" size="lg">{firstStudyName} <br />
-                                <Heading as="h2" size="lg" color="#84a98c">{firstSchoolName}</Heading>
-                            </Heading>
-                            <Image src={require("../images/kristiania.png")} h="60px" rounded="md" />
-                        </HStack>
-                        <HStack spacing={4} justifyContent="start" width="100%" divider={<StackDivider borderColor="#2f3e46"/>}>
-                            <Text fontSize="xl" fontStyle="italic" fontWeight="bold">Bachelor</Text>
-                            <Text fontSize="lg">2020 - 2023</Text>
-                        </HStack>
+                <Box width={{base: '100%', lg: '50%'}}>
+                    <VStack alignItems="start" divider={<StackDivider borderColor="#2f3e46" />} spacing={4}>
+                        <VStack width="100%">
+                            <HStack justifyContent={{base: 'space-between', md: 'start', lg: 'space-between'}} spacing={8} width="100%">
+                                <Heading as="h2" size="lg">{firstStudyName} <br />
+                                    <Heading as="h2" size="lg" color="#84a98c">{firstSchoolName}</Heading>
+                                </Heading>
+                                <Image src={require("../images/kristiania.png")} h="60px" rounded="md" alt="Høyskolen Kristiania Logo" />
+                            </HStack>
+                            <HStack spacing={4} justifyContent="start" width="100%" divider={<StackDivider borderColor="#2f3e46"/>}>
+                                <Text fontSize="xl" fontStyle="italic" fontWeight="bold">Bachelor</Text>
+                                <Text fontSize="lg">2020 - 2023</Text>
+                                <Text fontSize="lg">Frontend- og mobilutvikling</Text>
+                            </HStack>
+                        </VStack>
+                        <VStack alignItems="left">
+                            <Text>
+                                Gjennom bachelorgraden i frontend- og mobilutvikling har jeg fått kjennskap til utvikling gjennom hele stacken,
+                                blandt annet med frontend-teknologier som Javascript (React, Vue), HTML, CSS og backend-teknologier som Java. I tillegg har jeg
+                                fått kjennskap til mobilutvikling med native-teknologier som Kotlin og Swift, og kryssplattformutvikling med Ionic.
+                                Jeg har blitt kjent med designprosesser, og fått erfaring med UX- og UI-design gjennom bruk av designverktøyet
+                                Figma. Innføring i versjonskontroll, testing, sikkerhet og bruk/oppsett av databaser.
+                            </Text>
+                        </VStack>
+                        <VStack alignItems="left">
+                            <Heading as="h3" size="md">Bacheloroppgave</Heading>
+                            <Text>Jeg gjennomførte mitt bachelorprosjekt hos Norges Idrettsforbund, hvor jeg og min gruppe hadde ansvar for å designe og utvikle
+                                vår egen modul av en større løsning på tvers av fire bachelorgrupper.
+                            </Text>
+                            <Text>
+
+                            </Text>
+                        </VStack>
                     </VStack>
                 </Box>
-                <Box>
-                    <VStack alignItems="start">
-                        <HStack justifyContent="space-between" width="100%" spacing={8}>
-                            <Heading as="h2" size="lg">{secondStudyName} <br /> 
-                                <Heading as="h2" size="lg" color="#84a98c">{secondSchoolName}</Heading>
-                            </Heading>
-                            <Image src={require("../images/oslomet.png")} h="60px" rounded="md" />
-                        </HStack>
-                        <HStack spacing={4} divider={<StackDivider borderColor="#2f3e46"/>}>
-                            <Text fontSize="xl" fontStyle="italic" fontWeight="bold">Master</Text>
-                            <Text fontSize="lg">2023 - 2025</Text>
-                            <Text fontSize="lg">Universell utforming av IKT</Text>
-                        </HStack>
+                <Box width={{base: '100%', lg: '50%'}}>
+                    <VStack alignItems="start" divider={<StackDivider borderColor="#2f3e46" />} spacing={4}>
+                        <VStack width="100%">
+                            <HStack justifyContent={{base: 'space-between', md: 'start', lg: 'space-between'}} spacing={8} width="100%">
+                                <Heading as="h2" size="lg">{secondStudyName} <br /> 
+                                    <Heading as="h2" size="lg" color="#84a98c">{secondSchoolName}</Heading>
+                                </Heading>
+                                <Image src={require("../images/oslomet.png")} h="60px" rounded="md" alt="OsloMet Logo" />
+                            </HStack>
+                            <HStack spacing={4} justifyContent="start" width="100%" divider={<StackDivider borderColor="#2f3e46"/>}>
+                                <Text fontSize="xl" fontStyle="italic" fontWeight="bold">Master</Text>
+                                <Text fontSize="lg">2023 - 2025</Text>
+                                <Text fontSize="lg">Universell utforming av IKT</Text>
+                            </HStack>
+                        </VStack>
+                        <VStack alignItems="left">
+
+                        </VStack>
+                        
                     </VStack>
                 </Box>
             </Stack>
