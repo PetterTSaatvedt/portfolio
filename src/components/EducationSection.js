@@ -22,7 +22,7 @@ const EducationSection = () => {
             <Stack 
                 direction={{base: 'column', lg: 'row'}}
                 spacing={8}
-                divider={<StackDivider p={2} />}
+                divider={<StackDivider borderColor="#2f3e46" />}
             >
                 <Box>
                     <VStack>
