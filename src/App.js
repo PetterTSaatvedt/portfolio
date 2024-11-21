@@ -21,7 +21,6 @@ function App() {
           <PersonalLifeSection />
           <TechStackAndCertificatesSection />
           <ProjectsSection />
-          <ContactMeSection />
           <Footer />
           <Alert />
         </main>

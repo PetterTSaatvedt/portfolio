@@ -1,8 +1,8 @@
 import React from "react";
-import { Avatar, Heading, VStack, Mark, defineStyle, Text} from "@chakra-ui/react";
+import { Avatar, Heading, VStack, Mark, defineStyle, Text, HStack} from "@chakra-ui/react";
 import FullScreenSection from "./FullScreenSection";
 
-const greeting = "Hallais!👋 Mitt navn er Petter,";
+const greeting = "Hallais👋 Mitt navn er Petter!";
 const bio1 = "frontend-utvikler";
 const bio2 = "med en interesse for UX og universell utforming!";
 const bio3 = "For øyeblikket fullfører jeg en mastergrad i informasjonsteknologi på OsloMet 📚"
@@ -17,7 +17,6 @@ const ringCss = defineStyle({
   outlineStyle: "solid",
 })
 
-
 const LandingSection = () => (
   <FullScreenSection
     justifyContent="center"
@@ -29,7 +28,7 @@ const LandingSection = () => (
     <VStack spacing={8}>
       <VStack spacing={4}>
         <Avatar src={require("../images/landingpicture.jpg")} size="2xl" css={ringCss} />
-        <Heading size="xs">{greeting}</Heading>
+        <Heading size="sm">{greeting}</Heading>
       </VStack>
       <VStack>
         <Heading>
@@ -52,8 +51,8 @@ const LandingSection = () => (
         <Heading>{bio2}</Heading>
       </VStack>
       <VStack spacing={8}>
-          <Heading size="sm">{bio3}</Heading>
-        </VStack>
+        <Heading size="sm">{bio3}</Heading>
+      </VStack>
     </VStack>
     
   </FullScreenSection>
