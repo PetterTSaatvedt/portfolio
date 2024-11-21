@@ -21,40 +21,37 @@ const LandingSection = () => (
   <FullScreenSection
     justifyContent="center"
     alignItems="center"
+    textAlign="center"
     isDarkBackground
     backgroundColor="#2f3e46"
     color="#cad2c5"
+    p={12}
+    spacing={12}
   >
     <VStack spacing={8}>
       <VStack spacing={4}>
         <Avatar src={require("../images/landingpicture.jpg")} size="2xl" css={ringCss} />
         <Heading size="sm">{greeting}</Heading>
       </VStack>
-      <VStack>
-        <Heading>
-          Jeg er en {" "}
-          <Mark
-              fontStyle="italic"
-              color="#84a98c"
-              position="relative"
-          >
-            {bio1}
-            <img
-              style={{ position: "absolute", left: 0 }}
-              src="https://uploads-ssl.webflow.com/5fac11c3554384e2baf6481c/61c4dc7572d22f05ba26fd34_hero-underline.svg"
-              loading="lazy"
-              alt=""
-            />
-          </Mark>
-          {" "} spesialisert i React
-        </Heading>
-        <Heading>{bio2}</Heading>
-      </VStack>
-      <VStack spacing={8}>
-        <Heading size="sm">{bio3}</Heading>
-      </VStack>
+      <Heading width={{base: "90%", sm: "80%", md: "70%"}}>
+        Jeg er en {" "}
+        <Mark
+            fontStyle="italic"
+            color="#84a98c"
+            position="relative"
+        >
+          {bio1}
+          <img
+            style={{ position: "absolute", left: 0 }}
+            src="https://uploads-ssl.webflow.com/5fac11c3554384e2baf6481c/61c4dc7572d22f05ba26fd34_hero-underline.svg"
+            loading="lazy"
+            alt=""
+          />
+        </Mark>
+        {" "} spesialisert i React {bio2}
+      </Heading>
+      <Heading size="sm">{bio3}</Heading>
     </VStack>
-    
   </FullScreenSection>
 );
 
