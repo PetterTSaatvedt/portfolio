@@ -4,8 +4,6 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import {
   faGithub,
   faLinkedin,
-  faMedium,
-  faStackOverflow,
 } from "@fortawesome/free-brands-svg-icons";
 import { Box, HStack } from "@chakra-ui/react";
 
@@ -72,10 +70,12 @@ const Header = () => {
       top={0}
       left={0}
       right={0}
+      p={2}
       transitionProperty="transform"
       transitionDuration=".3s"
       transitionTimingFunction="ease-in-out"
-      backgroundColor="#18181b"
+      backgroundColor="#00000040"
+      backdropFilter="blur(6px)"
     >
       <Box color="white" maxWidth="1280px" margin="0 auto">
         <HStack

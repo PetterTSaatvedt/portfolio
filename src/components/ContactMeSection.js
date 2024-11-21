@@ -62,13 +62,12 @@ const LandingSection = () => {
     <FullScreenSection
       isDarkBackground
       backgroundColor="#2f3e46"
-      spacing={8}
+      spacing={12}
+      p={12}
       id="contactme-section"
     >
-      <VStack w="1024px" p={32} alignItems="flex-start">
-        <Heading as="h1" color="#cad2c5">
-          Contact me
-        </Heading>
+      <Heading as="h1" color="#cad2c5">Kontakt meg</Heading>
+      <VStack width="100vw" maxWidth="900px" alignItems="flex-start">
         <Box p={6} rounded="md" w="100%">
           <form onSubmit={handleSubmit}>
             <VStack spacing={4}>

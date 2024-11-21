@@ -40,7 +40,7 @@ const EducationSection = () => {
                             </HStack>
                         </VStack>
                         <VStack alignItems="left">
-                            <Text>
+                            <Text fontWeight="light">
                                 Gjennom bachelorgraden i informasjonsteknologi med fordypning i frontend- og mobilutvikling har jeg fått kjennskap til utvikling gjennom hele stacken,
                                 blandt annet med frontend-teknologier som Javascript (React, Vue), HTML, CSS og backend-teknologier som Java. I tillegg har jeg
                                 fått kjennskap til mobilutvikling med native-teknologier som Kotlin og Swift, og kryssplattformutvikling med Ionic.
@@ -50,7 +50,7 @@ const EducationSection = () => {
                         </VStack>
                         <VStack alignItems="left">
                             <Heading as="h3" size="md">Bacheloroppgave</Heading>
-                            <Text>
+                            <Text fontWeight="light">
                                 I perioden januar 2023 - mai 2023 gjennomførte jeg mitt bachelorprosjekt hos Norges Idrettsforbund, hvor jeg og min gruppe hadde som ansvar å designe og utvikle
                                 vår egen modul av en større løsning på tvers av fire bachelorgrupper. Prosjektets formål var å utvikle et produkt for påmelding i idretten, hvor man kan bli medlem av
                                 eller lage grupper for sine lag eller uavhengige grupper. På vår gruppe hadde jeg hovedansvar for frontendutviklingen, som ble gjort gjennom Vue, i tillegg til å ha en
@@ -75,15 +75,16 @@ const EducationSection = () => {
                             </HStack>
                         </VStack>
                         <VStack alignItems="left">
-                            <Text>
+                            <Text fontWeight="light">
                                 Gjennom masterprogrammet i anvendt data- og informasjonsteknologi med spesialisering i universell utforming av IKT har jeg tilegnet meg
                                 mye kunnskap rundt temaer som brukervennlighet, tilgjengelighet og brukermangfold. Med andre ord har jeg i stor grad lært brukeren bak skjermen å kjenne,
-                                og fått en forståelse for de ulike interaksjonsmetodene som skal tas hensyn til i utforming og utvikling av digitale løsninger. 
+                                og fått en forståelse for de ulike interaksjonsmetodene som skal tas hensyn til i utforming og utvikling av digitale løsninger, for å legge til rette for at
+                                flest mulig mennesker har tilgang til dem.
                             </Text>
                         </VStack>
                         <VStack alignItems="left">
                             <Heading as="h3" size="md">Masteroppgave</Heading>
-                            <Text>
+                            <Text fontWeight="light">
                                 Jeg skal gjennomføre mitt masterprosjekt i perioden januar 2025 - mai 2025. Oppgaven baserer seg på en eksisterende problemstilling; en aldrende befolkning, og derav
                                 en økning i antall personer med demens og andre sykdommer. Denne oppgaven planlegger spesifikt å fokusere på demens, og hvordan man potensielt kan forebygge dette gjennom 
                                 å stimulere hjernen gjennom kognitiv aktivitet. Det overordnede målet blir derfor å designe og utvikle en digital løsning, med intensjon om å integrere kognitiv trening inn 

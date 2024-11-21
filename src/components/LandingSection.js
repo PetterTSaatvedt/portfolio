@@ -1,5 +1,5 @@
 import React from "react";
-import { Avatar, Heading, VStack, Mark, defineStyle, Text } from "@chakra-ui/react";
+import { Avatar, Heading, VStack, Mark, defineStyle, Text} from "@chakra-ui/react";
 import FullScreenSection from "./FullScreenSection";
 
 const greeting = "Hallais!👋 Mitt navn er Petter,";
@@ -11,11 +11,12 @@ const bio3 = "For øyeblikket fullfører jeg en mastergrad i informasjonsteknolo
 // Use a combination of Avatar, Heading and VStack components.
 
 const ringCss = defineStyle({
-  outlineWidth: "1px",
+  outlineWidth: "2px",
   outlineColor: "#84a98c",
   outlineOffset: "1px",
   outlineStyle: "solid",
 })
+
 
 const LandingSection = () => (
   <FullScreenSection
