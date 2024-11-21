@@ -5,7 +5,7 @@ import {
   faGithub,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
-import { Box, HStack } from "@chakra-ui/react";
+import { Box, HStack, Text } from "@chakra-ui/react";
 
 const socials = [
   {
@@ -76,6 +76,7 @@ const Header = () => {
       transitionTimingFunction="ease-in-out"
       backgroundColor="#00000040"
       backdropFilter="blur(6px)"
+      _hover={{bg: "#00000090"}}
     >
       <Box color="white" maxWidth="1280px" margin="0 auto">
         <HStack
@@ -97,9 +98,15 @@ const Header = () => {
           </nav>
           <nav>
             <HStack spacing={8}>
-              <a href="#education" onClick={handleClick("education")}>Utdanning</a>
-              <a href="#projects" onClick={handleClick("projects")}>Prosjekter</a>
-              <a href="#contact-me" onClick={handleClick("contactme")}>Kontakt meg</a>
+              <a href="#education" onClick={handleClick("education")}>
+                <Text _hover={{color: "#84a98c", fontStyle: "italic"}}>Utdanning</Text>
+              </a>
+              <a href="#projects" onClick={handleClick("projects")}>
+                <Text _hover={{color: "#84a98c", fontStyle: "italic"}}>Prosjekter</Text>
+              </a>
+              <a href="#contact-me" onClick={handleClick("contactme")}>
+               <Text _hover={{color: "#84a98c", fontStyle: "italic"}}>Kontakt meg</Text>
+              </a>
             </HStack>
           </nav>
         </HStack>
