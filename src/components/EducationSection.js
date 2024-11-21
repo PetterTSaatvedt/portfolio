@@ -29,7 +29,7 @@ const EducationSection = () => {
                         <VStack width="100%">
                             <HStack justifyContent={{base: 'space-between', md: 'start', lg: 'space-between'}} spacing={8} width="100%">
                                 <Heading as="h2" size="lg">{firstStudyName} <br />
-                                    <Heading as="h2" size="lg" color="#84a98c">{firstSchoolName}</Heading>
+                                    <Text as="span" color="#84a98c">{firstSchoolName}</Text>
                                 </Heading>
                                 <Image src={require("../images/kristiania.png")} h="60px" rounded="md" alt="Høyskolen Kristiania Logo" />
                             </HStack>
@@ -64,7 +64,7 @@ const EducationSection = () => {
                         <VStack width="100%">
                             <HStack justifyContent={{base: 'space-between', md: 'start', lg: 'space-between'}} spacing={8} width="100%">
                                 <Heading as="h2" size="lg">{secondStudyName} <br /> 
-                                    <Heading as="h2" size="lg" color="#84a98c">{secondSchoolName}</Heading>
+                                    <Text as="span" color="#84a98c">{secondSchoolName}</Text>
                                 </Heading>
                                 <Image src={require("../images/oslomet.png")} h="60px" rounded="md" alt="OsloMet Logo" />
                             </HStack>
