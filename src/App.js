@@ -8,6 +8,7 @@ import { AlertProvider } from "./context/alertContext";
 import Alert from "./components/Alert";
 import EducationSection from "./components/EducationSection";
 import TechStackAndCertificatesSection from "./components/TechStackAndCertificatesSection";
+import PersonalLifeSection from "./components/PersonalLifeSection";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Header />
           <LandingSection />
           <EducationSection />
+          <PersonalLifeSection />
           <TechStackAndCertificatesSection />
           <ProjectsSection />
           <ContactMeSection />
