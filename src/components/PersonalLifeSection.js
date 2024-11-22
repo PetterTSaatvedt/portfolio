@@ -14,7 +14,7 @@ const PersonalLifeSection = () => {
         id="personal-section"
         >
             <Heading as="h1" size="xl">Hvem er så jeg?</Heading>
-            <HStack spacing={8} width="100%" justifyContent="space-between" alignItems="start">
+            <HStack spacing={{base: 4, md: 8}} width="100%" justifyContent="space-between" alignItems="start">
                 <Image src={require('../images/personal1.jpg')} width={{base: 40, md: 60, lg: 80}} rounded="xl" />
                 <VStack alignItems="left" height="100%" marginTop={{base: "5px", md: "10px"}}>
                     <Heading as="h2" size="xl" color="#84a98c" fontStyle="italic">Om meg</Heading>
@@ -28,7 +28,7 @@ const PersonalLifeSection = () => {
                     </Text>
                 </VStack>
             </HStack>
-            <HStack spacing={8} width="100%" justifyContent="space-between" alignItems="start">
+            <HStack spacing={{base: 4, md: 8}} width="100%" justifyContent="space-between" alignItems="start">
                 <VStack alignItems="left" height="100%" marginTop={{base: "5px", md: "10px"}}>
                     <Heading as="h2" size="xl" color="#84a98c" fontStyle="italic">Interesser</Heading>
                     <Text fontWeight="light" fontSize={{base: "sm", md: "lg"}}>

@@ -10,7 +10,7 @@ const EducationSection = () => {
 
     return (
         <FullScreenSection
-        p={12}
+        p={{base: 4, md: 12}}
         spacing={12}
         alignItems="center"
         isDarkBackground
@@ -27,11 +27,11 @@ const EducationSection = () => {
                 <Box width={{base: '100%', lg: '50%'}}>
                     <VStack alignItems="start" divider={<StackDivider borderColor="#2f3e46" />} spacing={6}>
                         <VStack width="100%">
-                            <HStack justifyContent={{base: 'space-between', md: 'start', lg: 'space-between'}} spacing={8} width="100%">
+                            <HStack justifyContent={{base: 'space-between', md: 'start', lg: 'space-between'}} spacing={{base: 2, md: 8}} width="100%">
                                 <Heading as="h2" size="lg">{firstStudyName} <br />
                                     <Text as="span" color="#84a98c">{firstSchoolName}</Text>
                                 </Heading>
-                                <Image src={require("../images/kristiania.png")} h="60px" rounded="md" alt="Høyskolen Kristiania Logo" />
+                                <Image src={require("../images/kristiania.png")} h={{base: "50px", md: "60px"}} rounded="md" alt="Høyskolen Kristiania Logo" />
                             </HStack>
                             <HStack spacing={4} justifyContent="start" width="100%" divider={<StackDivider borderColor="#2f3e46"/>}>
                                 <Text fontSize="xl" fontStyle="italic" fontWeight="bold">Bachelor</Text>
@@ -62,11 +62,11 @@ const EducationSection = () => {
                 <Box width={{base: '100%', lg: '50%'}}>
                     <VStack alignItems="start" divider={<StackDivider borderColor="#2f3e46" />} spacing={6}>
                         <VStack width="100%">
-                            <HStack justifyContent={{base: 'space-between', md: 'start', lg: 'space-between'}} spacing={8} width="100%">
+                            <HStack justifyContent={{base: 'space-between', md: 'start', lg: 'space-between'}} spacing={{base: 2, md: 8}} width="100%">
                                 <Heading as="h2" size="lg">{secondStudyName} <br /> 
                                     <Text as="span" color="#84a98c">{secondSchoolName}</Text>
                                 </Heading>
-                                <Image src={require("../images/oslomet.png")} h="60px" rounded="md" alt="OsloMet Logo" />
+                                <Image src={require("../images/oslomet.png")} h={{base: "50px", md: "60px"}} rounded="md" alt="OsloMet Logo" />
                             </HStack>
                             <HStack spacing={4} justifyContent="start" width="100%" divider={<StackDivider borderColor="#2f3e46"/>}>
                                 <Text fontSize="xl" fontStyle="italic" fontWeight="bold">Master</Text>
