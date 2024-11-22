@@ -24,7 +24,7 @@ const PersonalLifeSection = () => {
                         min, og gått videre til et toårig masterprogram som jeg etter planen blir ferdig med til sommeren 2025.
                     </Text>
                     <Text fontWeight="light" fontSize={{base: "sm", md: "lg"}}>
-                    På et personlig plan, vil jeg beskrive meg selv som en omsorgsfull og positiv type
+                    På et personlig plan, vil jeg beskrive meg selv som en omgjengelig og positiv type, som er
                     </Text>
                 </VStack>
             </HStack>
@@ -37,7 +37,10 @@ const PersonalLifeSection = () => {
                     </Text>
                     <Text fontWeight="light" fontSize={{base: "sm", md: "lg"}}>
                         Jeg er generelt sett glad i å være fysisk aktiv, så i tillegg til fotballen holder jeg meg aktiv gjennom løping og 
-                        nå nylig padel 🎾 På vinteren er det ski som gjelder, både alpint og langrenn!
+                        nå nylig gjennom padel 🎾 På vinteren er det ski som gjelder, både alpint og langrenn!
+                    </Text>
+                    <Text>
+                        Jeg er
                     </Text>
                 </VStack>
                 <Image src={require('../images/profile.jpg')} width={{base: 40, md: 60, lg: 80}} rounded="xl" />
