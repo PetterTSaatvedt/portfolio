@@ -1,6 +1,6 @@
 import React from "react";
 import FullScreenSection from "./FullScreenSection";
-import { Box, Heading } from "@chakra-ui/react";
+import { Box, Heading, SimpleGrid } from "@chakra-ui/react";
 import Card from "./Card";
 
 const projects = [
@@ -35,19 +35,14 @@ const ProjectsSection = () => {
     <FullScreenSection
       backgroundColor="#0c1821"
       isDarkBackground
-      p={8}
-      alignItems="flex-start"
-      spacing={8}
+      p={{base: 4, md: 12}}
+      spacing={12}
       id="projects-section"
     >
       <Heading as="h1" color="#cad2c5">
-        Featured Projects
+        Kodeprosjekter
       </Heading>
-      <Box
-        display="grid"
-        gridTemplateColumns="repeat(2,minmax(0,1fr))"
-        gridGap={8}
-      >
+      <SimpleGrid columns={{base: 1, md: 2}} gap="40px">
         {projects.map((project) => (
           <Card
             key={project.title}
@@ -56,7 +51,7 @@ const ProjectsSection = () => {
             imageSrc={project.getImageSrc()}
           />
         ))}
-      </Box>
+      </SimpleGrid>
     </FullScreenSection>
   );
 };
