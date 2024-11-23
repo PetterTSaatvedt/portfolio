@@ -11,6 +11,7 @@ const TechStackAndCertificatesSection = () => {
         isDarkBackground
         backgroundColor="#2f3e46"
         color="#cad2c5"
+        id="techstack-section"
         >
             <VStack spacing={8}>
                 <Text>Tech Stack & Certificates</Text>

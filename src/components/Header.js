@@ -98,14 +98,17 @@ const Header = () => {
           </nav>
           <nav>
             <HStack spacing={8}>
-              <a href="#education" onClick={handleClick("education")}>
+              <a href="/#education" onClick={handleClick("education")}>
                 <Text _hover={{color: "#84a98c", fontStyle: "italic"}}>Utdanning</Text>
               </a>
-              <a href="#projects" onClick={handleClick("projects")}>
+              <a href="/#personal" onClick={handleClick("personal")}>
+               <Text _hover={{color: "#84a98c", fontStyle: "italic"}}>Om meg</Text>
+              </a>
+              <a href="/#projects" onClick={handleClick("projects")}>
                 <Text _hover={{color: "#84a98c", fontStyle: "italic"}}>Prosjekter</Text>
               </a>
-              <a href="#contact-me" onClick={handleClick("contactme")}>
-               <Text _hover={{color: "#84a98c", fontStyle: "italic"}}>Kontakt meg</Text>
+              <a href="/#tech-stack" onClick={handleClick("techstack")}>
+               <Text _hover={{color: "#84a98c", fontStyle: "italic"}}>Tech Stack</Text>
               </a>
             </HStack>
           </nav>
