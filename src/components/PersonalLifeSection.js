@@ -28,7 +28,7 @@ const PersonalLifeSection = () => {
                     </Text>
                 </VStack>
             </HStack>
-            <HStack spacing={{base: 4, md: 8}} width="100%" justifyContent="space-between" alignItems="start">
+            <Stack direction={{base: "column", md: "row"}} spacing={{base: 4, md: 8}} width="100%" justifyContent="space-between" alignItems="start">
                 <VStack alignItems="left" height="100%" marginTop={{base: "5px", md: "10px"}}>
                     <Heading as="h2" size="xl" color="#84a98c" fontStyle="italic">Interesser</Heading>
                     <Text fontWeight="light" fontSize={{base: "sm", md: "lg"}}>
@@ -43,8 +43,8 @@ const PersonalLifeSection = () => {
                         Jeg er
                     </Text>
                 </VStack>
-                <Image src={require('../images/profile.jpg')} width={{base: 40, md: 60, lg: 80}} rounded="xl" />
-            </HStack> 
+                <Image src={require('../images/personal2.jpg')} height={{base: 80, md: 60, lg: 80}} rounded="xl" />
+            </Stack> 
         </FullScreenSection>
     );
 }
