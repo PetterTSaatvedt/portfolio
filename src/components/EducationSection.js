@@ -10,7 +10,7 @@ const EducationSection = () => {
 
     return (
         <FullScreenSection
-        p={{base: 4, md: 12}}
+        p={{base: 8, md: 12}}
         spacing={12}
         alignItems="center"
         isDarkBackground
