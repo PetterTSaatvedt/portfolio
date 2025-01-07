@@ -10,12 +10,13 @@ const Card = ({ title, description, imageSrc, liveUrl, repositoryUrl  }) => {
     <VStack
       backgroundColor="#2f3e46"
       rounded="xl"
+      color="#cad2c5"
     >
       <Image src={imageSrc} roundedTop="xl"/>
       <VStack spacing={8} p={6} height="100%" justifyContent="space-between">
         <VStack alignItems="left" spacing={4}>
           <Heading as="h2" size="lg" fontStyle="italic" color="#84a98c">{title}</Heading>
-          <Text>{description}</Text>
+          <Text fontWeight="light" fontSize="md">{description}</Text>
         </VStack>
         <HStack justifyContent="center" alignItems="center" spacing={4}>
           <a href={liveUrl} key={liveUrl}>

@@ -51,7 +51,7 @@ const ProjectsSection = () => {
       <Heading as="h1" color="#cad2c5">
         Kodeprosjekter
       </Heading>
-      <SimpleGrid columns={{base: 1, md: 2}} gap="40px">
+      <SimpleGrid columns={{base: 1, md: 2}} spacing={{base: 12, md: 8, lg: 12}}>
         {projects.map((project) => (
           <Card
             key={project.title}
