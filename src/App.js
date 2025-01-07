@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 import { AlertProvider } from "./context/alertContext";
 import Alert from "./components/Alert";
 import EducationSection from "./components/EducationSection";
-import TechStackAndCertificatesSection from "./components/TechStackAndCertificatesSection";
+import TechStackSection from "./components/TechStackSection";
 import PersonalLifeSection from "./components/PersonalLifeSection";
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
           <EducationSection />
           <PersonalLifeSection />
           <ProjectsSection />
-          <TechStackAndCertificatesSection />
+          <TechStackSection />
           <Footer />
           <Alert />
         </main>

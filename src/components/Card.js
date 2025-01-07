@@ -1,7 +1,7 @@
 import { Heading, HStack, Image, Text, VStack, Box } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faDesktop } from "@fortawesome/free-solid-svg-icons";
+import { faLaptopCode } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 
 const Card = ({ title, description, imageSrc, liveUrl, repositoryUrl  }) => {
@@ -21,7 +21,7 @@ const Card = ({ title, description, imageSrc, liveUrl, repositoryUrl  }) => {
         <HStack justifyContent="center" alignItems="center" spacing={4}>
           <a href={liveUrl} key={liveUrl}>
             <Box _hover={{color: "#84a98c"}}>
-              <FontAwesomeIcon icon={faDesktop} size="xl" />
+              <FontAwesomeIcon icon={faLaptopCode} size="xl" />
             </Box>
           </a>
           <a href={repositoryUrl} key={repositoryUrl}>
