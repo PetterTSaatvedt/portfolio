@@ -4,7 +4,8 @@ import {
   faGithub,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
-import { Box, HStack, Text } from "@chakra-ui/react";
+import { Box, HStack, Text, IconButton, Menu, MenuButton, MenuList, MenuItem, useBreakpointValue } from "@chakra-ui/react";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const socials = [
   {
@@ -18,6 +19,7 @@ const socials = [
 ];
 
 const Header = () => {
+
   const handleClick = (anchor) => () => {
     const id = `${anchor}-section`;
     const element = document.getElementById(id);
@@ -61,6 +63,27 @@ const Header = () => {
     }
   }, [scrollPosition, previousScrollPosition]);
 
+  // Hamburger menu for mobile
+  const isMobile = useBreakpointValue({ base: true, md: false });
+
+  const NavLinks = () => (
+    <HStack spacing={8}>
+      <a href="/#education" onClick={handleClick("education")}>
+        <Text _hover={{color: "#84a98c", fontStyle: "italic"}}>Utdanning</Text>
+      </a>
+      <a href="/#personal" onClick={handleClick("personal")}>
+        <Text _hover={{color: "#84a98c", fontStyle: "italic"}}>Om meg</Text>
+      </a>
+      <a href="/#projects" onClick={handleClick("projects")}>
+        <Text _hover={{color: "#84a98c", fontStyle: "italic"}}>Prosjekter</Text>
+      </a>
+      <a href="/#tech-stack" onClick={handleClick("techstack")}>
+        <Text _hover={{color: "#84a98c", fontStyle: "italic"}}>Tech Stack</Text>
+      </a>
+    </HStack>
+  );
+
+
   return (
     <Box
       ref={scrollRef}
@@ -79,7 +102,7 @@ const Header = () => {
     >
       <Box color="white" maxWidth="1280px" margin="0 auto">
         <HStack
-          px={16}
+          px={{ base: 8, md: 16 }}
           py={4}
           justifyContent="space-between"
           alignItems="center"
@@ -98,20 +121,43 @@ const Header = () => {
             </HStack>
           </nav>
           <nav>
-            <HStack spacing={8}>
-              <a href="/#education" onClick={handleClick("education")}>
-                <Text _hover={{color: "#84a98c", fontStyle: "italic"}}>Utdanning</Text>
-              </a>
-              <a href="/#personal" onClick={handleClick("personal")}>
-               <Text _hover={{color: "#84a98c", fontStyle: "italic"}}>Om meg</Text>
-              </a>
-              <a href="/#projects" onClick={handleClick("projects")}>
-                <Text _hover={{color: "#84a98c", fontStyle: "italic"}}>Prosjekter</Text>
-              </a>
-              <a href="/#tech-stack" onClick={handleClick("techstack")}>
-               <Text _hover={{color: "#84a98c", fontStyle: "italic"}}>Tech Stack</Text>
-              </a>
-            </HStack>
+            {isMobile ? (
+              <Menu gutter={0}>
+                <MenuButton
+                  as={IconButton}
+                  aria-label="Navigation Menu"
+                  icon={<FontAwesomeIcon icon={faBars} />}
+                  variant="outline"
+                  color="white"
+                  _hover={{color: "#84a98c", bg: "none", borderColor: "#84a98c"}}
+                />
+                <MenuList 
+                  bg="#00000090"
+                  border="none" 
+                  mt={6}
+                  minWidth="100vw"
+                  height="100vh"
+                  rounded={0}
+                  zIndex="2"
+                  backdropFilter="blur(6px)"
+                  >
+                  <MenuItem onClick={handleClick("education")} bg="none" _hover={{bg: "#000000"}} p="1rem 2rem">
+                    <Text fontSize="2xl" fontWeight="700" fontStyle="italic">Utdanning</Text>
+                  </MenuItem>
+                  <MenuItem onClick={handleClick("personal")} bg="transparent" _hover={{bg: "#000000"}} p="1rem 2rem">
+                  <Text fontSize="2xl" fontWeight="700" fontStyle="italic">Om meg</Text>
+                  </MenuItem>
+                  <MenuItem onClick={handleClick("projects")} bg="transparent" _hover={{bg: "#000000"}} p="1rem 2rem">
+                  <Text fontSize="2xl" fontWeight="700" fontStyle="italic">Prosjekter</Text>
+                  </MenuItem>
+                  <MenuItem onClick={handleClick("techstack")} bg="transparent" _hover={{bg: "#000000"}} p="1rem 2rem">
+                  <Text fontSize="2xl" fontWeight="700" fontStyle="italic">Tech Stack</Text>
+                  </MenuItem>
+                </MenuList>
+              </Menu>
+            ) : (
+              <NavLinks />
+            )}
           </nav>
         </HStack>
       </Box>

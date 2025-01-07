@@ -10,7 +10,7 @@ const projects = [
       `En FPL webapplikasjon for oversikt over rank/poeng, ligaer og diverse. Løsningen fetcher data fra det offisielle Fantasy Premier League API'et
       og visualiserer dette gjennom de ulike featuresene. Bygget med React (JSX) og standard CSS.`,
     getImageSrc: () => require("../images/photo1.jpg"),
-    liveUrl: "",
+    liveUrl: "https://fantasy-app-petter-saatvedts-projects.vercel.app/",
     repositoryUrl: "https://github.com/PetterTSaatvedt/fantasy-app",
   },
   {
@@ -20,22 +20,6 @@ const projects = [
     getImageSrc: () => require("../images/photo2.jpg"),
     liveUrl: "https://meet-landing-page-tau-five.vercel.app/",
     repositoryUrl: "https://github.com/PetterTSaatvedt/meet-landing-page",
-  },
-  {
-    title: "Photo Gallery",
-    description:
-      "A One-stop shop for photographers to share and monetize their photos, allowing them to have a second source of income",
-    getImageSrc: () => require("../images/photo3.jpg"),
-    liveUrl: "",
-    repositoryUrl: "",
-  },
-  {
-    title: "Event planner",
-    description:
-      "A mobile application for leisure seekers to discover unique events and activities in their city with a few taps",
-    getImageSrc: () => require("../images/photo4.jpg"),
-    liveUrl: "",
-    repositoryUrl: "",
   },
 ];
 

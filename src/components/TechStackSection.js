@@ -73,34 +73,6 @@ const TechStackSection = () => {
                     ))}
                   </HStack>
                 </Box>
-                {/*
-                <SimpleGrid columns={{base: 2, md: 6}} spacing={8}>
-                    <VStack spacing={1}>
-                        <FontAwesomeIcon icon={faHtml5} size="8x" color="#ff6d41"/>
-                        <Text fontSize="sm">HTML5</Text>
-                    </VStack>
-                    <VStack spacing={1}>
-                        <FontAwesomeIcon icon={faCss3Alt} size="8x" color="#53a7ea" />
-                        <Text fontSize="sm">CSS3</Text>
-                    </VStack>
-                    <VStack spacing={1}>
-                        <FontAwesomeIcon icon={faJs} size="8x" color="#F0DB4F" />
-                        <Text fontSize="sm">JavaScript</Text>
-                    </VStack>
-                    <VStack spacing={1}>
-                        <FontAwesomeIcon icon={faReact} size="8x" color="rgb(88 196 220)"/>
-                        <Text fontSize="sm">React</Text>
-                    </VStack>
-                    <VStack spacing={1}>
-                        <FontAwesomeIcon icon={faVuejs} size="8x" color="#42b883"/>
-                        <Text fontSize="sm">Vue</Text>
-                    </VStack>
-                    <VStack spacing={1}>
-                        <FontAwesomeIcon icon={faFigma} size="8x" color="#a259ff"/>
-                        <Text fontSize="sm">Figma</Text>
-                    </VStack>
-                </SimpleGrid>
-                */}
             </VStack>
         </FullScreenSection>
     )
