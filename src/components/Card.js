@@ -1,24 +1,33 @@
-import { Heading, HStack, Image, Text, VStack } from "@chakra-ui/react";
+import { Heading, HStack, Image, Text, VStack, Box } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faDesktop } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 
-const Card = ({ title, description, imageSrc }) => {
-  // Implement the UI for the Card component according to the instructions.
-  // You should be able to implement the component with the elements imported above.
-  // Feel free to import other UI components from Chakra UI if you wish to.
+const Card = ({ title, description, imageSrc, liveUrl, repositoryUrl  }) => {
+  
   return (
     <VStack
       backgroundColor="#2f3e46"
       rounded="xl"
     >
       <Image src={imageSrc} roundedTop="xl"/>
-      <VStack spacing={4} alignItems="left" p={4}>
-        <Heading as="h2" size="md">{title}</Heading>
-        <Text>{description}</Text>
-        <HStack>
-          <Text fontWeight="bold">See more</Text>
-          <FontAwesomeIcon icon={faArrowRight} size="1x" />
+      <VStack spacing={8} p={6} height="100%" justifyContent="space-between">
+        <VStack alignItems="left" spacing={4}>
+          <Heading as="h2" size="lg" fontStyle="italic" color="#84a98c">{title}</Heading>
+          <Text>{description}</Text>
+        </VStack>
+        <HStack justifyContent="center" alignItems="center" spacing={4}>
+          <a href={liveUrl} key={liveUrl}>
+            <Box _hover={{color: "#84a98c"}}>
+              <FontAwesomeIcon icon={faDesktop} size="xl" />
+            </Box>
+          </a>
+          <a href={repositoryUrl} key={repositoryUrl}>
+            <Box _hover={{color: "#84a98c"}}>
+              <FontAwesomeIcon icon={faGithub} size="xl" />
+            </Box>
+          </a>
         </HStack>
       </VStack>
     </VStack>

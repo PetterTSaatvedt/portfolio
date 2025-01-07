@@ -47,7 +47,7 @@ const PersonalLifeSection = () => {
                     </Text>
                 </VStack>
                 <Image src={require('../images/personal2.jpg')} height={{md: 60, lg: 80}} display={{base: "none", md: "block"}}rounded="xl" alt=""/>
-            </Stack> 
+            </Stack>
         </FullScreenSection>
     );
 }
