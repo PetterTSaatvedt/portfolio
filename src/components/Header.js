@@ -90,10 +90,12 @@ const Header = () => {
               {socials.map((social) => {
                 return (
                   <a href={social.url} key={social.url}>
-                    <FontAwesomeIcon icon={social.icon} size="2x" />
+                    <Box _hover={{color: "#84a98c"}}>
+                      <FontAwesomeIcon icon={social.icon} size="2x" />
+                    </Box>
                   </a>
                 );
-              })};
+              })}
             </HStack>
           </nav>
           <nav>
