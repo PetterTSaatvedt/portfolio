@@ -9,7 +9,7 @@ const projects = [
     description:
       `En FPL webapplikasjon for oversikt over rank/poeng, ligaer og diverse. Løsningen fetcher data fra det offisielle Fantasy Premier League API'et
       og visualiserer dette gjennom de ulike featuresene. Bygget med React (JSX) og standard CSS.`,
-    getImageSrc: () => require("../images/photo1.jpg"),
+    getImageSrc: () => require("../images/fantasy-app.png"),
     liveUrl: "https://fantasy-app-petter-saatvedts-projects.vercel.app/",
     repositoryUrl: "https://github.com/PetterTSaatvedt/fantasy-app",
   },
@@ -17,7 +17,7 @@ const projects = [
     title: "Landingsside for Meet",
     description:
       "En landingsside for en fiksjonell gruppechat-applikasjon, med fokus på responsivt design. Designfiler er produsert av teamet på Frontend Mentor. Bygget med HTML og CSS.",
-    getImageSrc: () => require("../images/photo2.jpg"),
+    getImageSrc: () => require("../images/meet.png"),
     liveUrl: "https://meet-landing-page-tau-five.vercel.app/",
     repositoryUrl: "https://github.com/PetterTSaatvedt/meet-landing-page",
   },
