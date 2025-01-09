@@ -130,6 +130,7 @@ const Header = () => {
                   variant="outline"
                   color="white"
                   _hover={{color: "#84a98c", bg: "none", borderColor: "#84a98c"}}
+                  _active={{color: "#84a98c", borderColor: "#84a98c"}}
                 />
                 <MenuList 
                   bg="#00000090"
@@ -141,16 +142,16 @@ const Header = () => {
                   zIndex="2"
                   backdropFilter="blur(6px)"
                   >
-                  <MenuItem onClick={handleClick("education")} bg="none" _hover={{bg: "#000000"}} p="1rem 2rem">
+                  <MenuItem onClick={handleClick("education")} bg="none" _hover={{bg: "#000000", color: "#84a98c"}} p="1rem 2rem">
                     <Text fontSize="2xl" fontWeight="700" fontStyle="italic">Utdanning</Text>
                   </MenuItem>
-                  <MenuItem onClick={handleClick("personal")} bg="transparent" _hover={{bg: "#000000"}} p="1rem 2rem">
+                  <MenuItem onClick={handleClick("personal")} bg="transparent" _hover={{bg: "#000000", color: "#84a98c"}} p="1rem 2rem">
                   <Text fontSize="2xl" fontWeight="700" fontStyle="italic">Om meg</Text>
                   </MenuItem>
-                  <MenuItem onClick={handleClick("projects")} bg="transparent" _hover={{bg: "#000000"}} p="1rem 2rem">
+                  <MenuItem onClick={handleClick("projects")} bg="transparent" _hover={{bg: "#000000", color: "#84a98c"}} p="1rem 2rem">
                   <Text fontSize="2xl" fontWeight="700" fontStyle="italic">Prosjekter</Text>
                   </MenuItem>
-                  <MenuItem onClick={handleClick("techstack")} bg="transparent" _hover={{bg: "#000000"}} p="1rem 2rem">
+                  <MenuItem onClick={handleClick("techstack")} bg="transparent" _hover={{bg: "#000000", color: "#84a98c"}} p="1rem 2rem">
                   <Text fontSize="2xl" fontWeight="700" fontStyle="italic">Tech Stack</Text>
                   </MenuItem>
                 </MenuList>
