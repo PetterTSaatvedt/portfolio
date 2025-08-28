@@ -21,6 +21,14 @@ const projects = [
     liveUrl: "https://meet-landing-page-tau-five.vercel.app/",
     repositoryUrl: "https://github.com/PetterTSaatvedt/meet-landing-page",
   },
+  {
+    title: "Masterprosjekt",
+    description: 
+      "En brukervennlig Android hjernetrim-app for eldre, som tilrettelegger for daglig hjernetrim gjennom korte spill. Løsningen er bygget med Kotlin og Jetpack Compose og kan foreløpig ansees som en MVP som skal videreutvikles i fremtidige prosjekt hos OsloMet.",
+      getImageSrc: () => require("../images/cognify.png"),
+      liveUrl: "https://sspect.github.io/Cognify/index.html",
+      repositoryUrl: "https://github.com/PetterTSaatvedt/Master_Project_CognitiveApp",
+  }
 ];
 
 const ProjectsSection = () => {

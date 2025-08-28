@@ -19,9 +19,10 @@ const PersonalLifeSection = () => {
                 <VStack alignItems="left" height="100%">
                     <Heading as="h2" size="xl" color="#84a98c" fontStyle="italic">Om meg</Heading>
                     <Text fontWeight="light" fontSize="md">
-                        Mitt navn er Petter Torst Saatvedt, jeg er 25 år, og er født og oppvokst i Stavanger. I 2019 flyttet jeg til Oslo, hvor jeg jobbet
-                        i ett år, før jeg så i 2020 startet på bachelorstudie i informasjonsteknologi. Siden den gang har jeg fullført bachelorgraden
-                        min, og gått videre til et toårig masterprogram som jeg etter planen blir ferdig med til sommeren 2025.
+                        Mitt navn er Petter Torst Saatvedt, jeg er 26 år, og er født og oppvokst i Stavanger. I 2019 flyttet jeg til Oslo, hvor jeg jobbet
+                        i ett år, før jeg så i 2020 startet på bachelorstudie i informasjonsteknologi. Siden den gang har jeg fullført både en bachelorgrad
+                        og mastergrad i informasjonsteknologi, på Høyskolen Kristiania og OsloMet. Masteroppgaven ble levert i mai, og nå jobber jeg midlertidig som lærer
+                        her i Oslo.
                     </Text>
                     <Text fontWeight="light" fontSize="md">
                         Som person vil jeg beskrive meg selv som en omgjengelig og positiv type. Jeg er omsorgsfull, og ønsker alltid å bidra til å skape gode opplevelser for menneskene rundt meg.
@@ -39,11 +40,12 @@ const PersonalLifeSection = () => {
                     <Heading as="h2" size="xl" color="#84a98c" fontStyle="italic">Interesser</Heading>
                     <Text fontWeight="light" fontSize="md">
                         Jeg er over gjennomsnittet glad i fotball, og derfor går mye av tiden min til å følge med på det som vises av fotball på skjermen,
-                        eller til å selv spille her i Oslos gjeveste turnering: 8. divisjon ⚽️ Ellers er jeg generelt sett glad i å være fysisk aktiv, så i tillegg til fotballen holder jeg meg aktiv gjennom løping og 
-                        nå nylig gjennom padel 🎾 På vinteren er det ski som gjelder, både alpint og langrenn!
+                        eller til å selv spille her i Oslos gjeveste turnering: 8. divisjon ⚽️ Her har jeg tatt på meg ansvaret som spillende trener, som jeg trives svært godt med.
+                        Ellers er jeg generelt sett glad i å være fysisk aktiv, så i tillegg til fotballen holder jeg meg aktiv gjennom løping, sykling og 
+                        padel 🎾 På vinteren er det ski som gjelder, både alpint og langrenn!
                     </Text>
                     <Text fontWeight="light" fontSize="md">
-                        Selv om playstationen har begynt å samle litt støv de siste semesterene er jeg fortsatt ikke fremmed for litt gaming en gang i blant, men spillinteressen (og konkurranseinstinktet) får i større grad utløp gjennom brettspill med venner og familie! 🎮🎲
+                        Jeg er også glad i spill, og er ikke fremmed for litt gaming en gang i blant, samtidig som spillinteressen (og konkurranseinstinktet) også i stor grad får utløp gjennom brettspill med venner og familie! 🎮🎲
                     </Text>
                 </VStack>
                 <Image src={require('../images/personal2.jpg')} height={{md: 60, lg: 80}} display={{base: "none", md: "block"}}rounded="xl" alt=""/>

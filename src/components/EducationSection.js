@@ -85,10 +85,11 @@ const EducationSection = () => {
                         <VStack alignItems="left">
                             <Heading as="h3" size="md">Masteroppgave</Heading>
                             <Text fontWeight="light">
-                                Jeg skal gjennomføre mitt masterprosjekt i perioden januar 2025 - mai 2025. Oppgaven baserer seg på en eksisterende problemstilling; en aldrende befolkning, og derav
-                                en økning i antall personer med demens og andre sykdommer. Denne oppgaven planlegger spesifikt å fokusere på demens, og hvordan man potensielt kan forebygge dette gjennom 
-                                å stimulere hjernen gjennom kognitiv aktivitet. Det overordnede målet blir derfor å designe og utvikle en digital løsning, med intensjon om å integrere kognitiv trening inn 
-                                i eldres daglige mobilbruk!
+                                Jeg gjennomførte mitt masterprosjekt i perioden januar 2025 - mai 2025. Oppgaven baserte seg på en eksisterende problemstilling; en aldrende befolkning, og derav
+                                en naturlig økning i antall personer med demens og andre sykdommer i kommende tiår. Denne oppgaven fokuserte spesifikt på demens, og hvordan man potensielt kan forebygge dette gjennom 
+                                å stimulere hjernen ved bruk av kognitiv trening. Det overordnede målet ble derfor å designe og utvikle en digital løsning, med intensjon om å integrere kognitiv trening inn 
+                                i eldres daglige mobilbruk! Prosjektet fulgte prinsippene til brukersentrert utvikling (UCD), med brukerinvolvering over tre iterasjoner av design/utvikling og brukertesting. Resultatet 
+                                ble en brukervennlig Android app som fasiliterer for daglig hjernetrim gjennom å tilpasse spillinvitasjoner i forhold til brukerens mobilvaner.
                             </Text>
                         </VStack>
                     </VStack>

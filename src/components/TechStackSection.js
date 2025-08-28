@@ -19,7 +19,7 @@ const TechStackSection = () => {
           <Heading as="h1" size="xl">Tech Stack</Heading>
           <Text maxWidth={{base: "100%", md: "45rem", lg: "50rem"}} textAlign={{base: "left", md: "center"}}>
               Min nåværende tech stack består hovedsakelig av HTML, CSS, JavaScript og React. Jeg følger nøye med på bransjestandarder for teknologier,
-              og ønsker alltid å tilpasse meg de kontinuerlige forandringene ved å lære meg flere teknologier, og har derfor erfaring med både React og Vue. Samtidig ser jeg som student stor verdi i å 
+              og ønsker alltid å tilpasse meg de kontinuerlige forandringene ved å lære meg flere teknologier, og har derfor erfaring med både React og Vue. Samtidig ser jeg som nyutdannet stor verdi i å 
               i større grad fokusere på fundamentale teknologier som JavaScript, som gjør det enklere å tilpasse seg bruk av rammeverk som kommer og går. For design og prototyping bruker jeg designverktøyet
               Figma.
           </Text>

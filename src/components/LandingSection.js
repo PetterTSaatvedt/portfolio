@@ -5,7 +5,7 @@ import FullScreenSection from "./FullScreenSection";
 const greeting = "Hallais👋 Mitt navn er Petter!";
 const bio1 = "frontend-utvikler";
 const bio2 = "med en interesse for UX og universell utforming!";
-const bio3 = "For øyeblikket fullfører jeg en mastergrad i informasjonsteknologi på OsloMet 📚"
+const bio3 = "I mai 2025 fullførte jeg min mastergrad i informasjonsteknologi på OsloMet 📚"
 
 // Implement the UI for the LandingSection component according to the instructions.
 // Use a combination of Avatar, Heading and VStack components.
